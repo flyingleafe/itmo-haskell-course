@@ -1,0 +1,393 @@
+
+==================== FINAL INTERFACE ====================
+2016-09-19 13:33:03.684034 UTC
+
+interface itmoh_3jdjN6JgnDTFbxnus2BZhp:Homework1.Task1 7103
+  interface hash: e2d37c02e651df750878cce48f1a8d55
+  ABI hash: 4f762d621029127320b536944678e6ca
+  export-list hash: 0ecaeef541f7462531453363af3c43bc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 723fa1c691d6d361cdaf4155d473e600
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Homework1.Task1.advancedMustFail
+  Homework1.Task1.advancedTests
+  Homework1.Task1.mustFail
+  Homework1.Task1.stringSum
+  Homework1.Task1.tests
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.OldList d8fd80b0e14aa085ce6219cd89dad356
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:Text.Read ef0ef92fb7358ae94bab089940adfd2a
+dee08392a8a1a620587712c39f927dd3
+  advancedMustFail :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedMustFail9
+                   Homework1.Task1.advancedMustFail1) -}
+874e204397ec16597e04e7116728fd9b
+  advancedMustFail1 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedMustFail8
+                   Homework1.Task1.advancedMustFail2) -}
+138ae755761cd78be273db7a276036e6
+  advancedMustFail2 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedMustFail7
+                   Homework1.Task1.advancedMustFail3) -}
+7c46812cea20663394c9da32b8aa1c0d
+  advancedMustFail3 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedMustFail6
+                   Homework1.Task1.advancedMustFail4) -}
+baa89fc317702e4f80c501ea5caf742f
+  advancedMustFail4 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedMustFail5
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+458bbf4a99f41d7f6f699056881adc1e
+  advancedMustFail5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1 + 1"#) -}
+f37b7785c72e6fabec85e8423deaf689
+  advancedMustFail6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "+-1"#) -}
+813eb178eafc34af0a7746487ffa8db1
+  advancedMustFail7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "-+1"#) -}
+e66d172b591d4f6cab430c1d31406266
+  advancedMustFail8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "++1"#) -}
+ed92fe412f9d63bf6ba34910854a4c18
+  advancedMustFail9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1+1"#) -}
+51fc077b2bb8797afad7b34e45fae925
+  advancedTests :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedTests7
+                   Homework1.Task1.advancedTests1) -}
+39abf0e98a1d3e07a3bb37612a93dd15
+  advancedTests1 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedTests6
+                   Homework1.Task1.advancedTests2) -}
+9599fe2aec1a488385441d615c572d36
+  advancedTests2 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedTests5
+                   Homework1.Task1.advancedTests3) -}
+af9637f3d81502417bbbd5ae1aab6e8b
+  advancedTests3 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedTests4
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+9aa50d26fd85acba58c35c7bad0fc5d8
+  advancedTests4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "+1 -1"#) -}
+cfe95e408bb13a04a979cde64343557c
+  advancedTests5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "-1 +1"#) -}
+10a8ee9d9eac29e7a41d86da98993b03
+  advancedTests6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1 +1"#) -}
+6e038b5780f34213e7b7a532d6ae1848
+  advancedTests7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "+1"#) -}
+c81d1b5e4df23ba7b3ec3b3caab9e6ba
+  mustFail :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.mustFail10
+                   Homework1.Task1.mustFail1) -}
+d45d16f67d2152d07c22926b3bfa8be1
+  mustFail1 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.mustFail9
+                   Homework1.Task1.mustFail2) -}
+548d206ff7539ed760d15db17e3953a3
+  mustFail10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "asd"#) -}
+112e04bc28ba5874eb60150f20b66695
+  mustFail2 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.mustFail8
+                   Homework1.Task1.mustFail3) -}
+83a744c9d985382b0e23a029ee7d9f8e
+  mustFail3 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.mustFail7
+                   Homework1.Task1.mustFail4) -}
+c61aa18730f1647e5e6bb5a3232d95b7
+  mustFail4 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.advancedTests7
+                   Homework1.Task1.mustFail5) -}
+7b53bf1dc10df0cfcc9e67fdbd3415d1
+  mustFail5 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.mustFail6
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+95410a70d53951f922bbb7e86ca17421
+  mustFail6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1+"#) -}
+63ca924cd2d8538e38ceaa4649b10af1
+  mustFail7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "--2"#) -}
+8a5ac7e41f7b801aa0162237eab49e37
+  mustFail8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1.2"#) -}
+cb959826fac5edb147d7b5ffa43a07a7
+  mustFail9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1-1"#) -}
+00ec9e57c45e6e9ebc29d58357506a1f
+  stringSum :: GHC.Base.String -> GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ x :: GHC.Base.String ->
+                 Data.OldList.wordsFB
+                   @ (GHC.Types.Int -> GHC.Types.Int)
+                   Homework1.Task1.stringSum2
+                   (GHC.Base.id @ GHC.Types.Int)
+                   x
+                   Homework1.Task1.stringSum1) -}
+b784feddbb99aa360d001783ebb9eac5
+  stringSum1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+0bac8ce1ec6d62d417cdcf59c88b03dc
+  stringSum2 ::
+    [GHC.Types.Char]
+    -> (GHC.Types.Int -> GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+  {- Arity: 3,
+     Unfolding: (\ x :: [GHC.Types.Char]
+                   ys :: GHC.Types.Int -> GHC.Types.Int[OneShot]
+                   tpl :: GHC.Types.Int[OneShot] ->
+                 ys
+                   (case tpl of wild { GHC.Types.I# x1 ->
+                    case Text.Read.readEither6
+                           @ GHC.Types.Int
+                           (Text.ParserCombinators.ReadP.run
+                              @ GHC.Types.Int
+                              Homework1.Task1.stringSum5
+                              (case x of wild1 {
+                                 [] -> GHC.Types.[] @ GHC.Types.Char
+                                 : ds s
+                                 -> case ds of wild2 { GHC.Types.C# ds1 ->
+                                    case ds1 of ds2 { DEFAULT -> wild1 '+' -> s } } })) of wild1 {
+                      [] -> Homework1.Task1.stringSum4
+                      : x2 ds
+                      -> case ds of wild2 {
+                           []
+                           -> case x2 of wild3 { GHC.Types.I# y ->
+                              GHC.Types.I# (GHC.Prim.+# x1 y) }
+                           : ipv ipv1 -> Homework1.Task1.stringSum3 } } })) -}
+4eb398c074ab66dfbfdbcf79bcd82f9a
+  stringSum3 :: GHC.Types.Int
+  {- Strictness: b -}
+6b632a933932c3cb00e0fd6317739ba3
+  stringSum4 :: GHC.Types.Int
+  {- Strictness: b -}
+2d3ca5f2ee7f36650764616960866a67
+  stringSum5 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: ((GHC.Read.$fReadInt3
+                    GHC.Read.$fReadInt_$sconvertInt
+                    Text.ParserCombinators.ReadPrec.minPrec)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.NTCo:ReadP[0] <GHC.Types.Int>_R)
+                   @ GHC.Types.Int
+                   (Text.Read.readEither5 @ GHC.Types.Int)) -}
+f168b7b9d06208c056b3a13607da9b4d
+  tests :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests27
+                   Homework1.Task1.tests1) -}
+0fc962c643950a7615b46f14fc870419
+  tests1 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests26
+                   Homework1.Task1.tests2) -}
+2af24e325a918a723142374c0914af06
+  tests10 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests17
+                   Homework1.Task1.tests11) -}
+9f138e54ef353b152e3c81acc68d9921
+  tests11 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests16
+                   Homework1.Task1.tests12) -}
+391b03a6915ca9e888a9c28843c4e311
+  tests12 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests15
+                   Homework1.Task1.tests13) -}
+b242ed5a8ee95f473667728cee7c717f
+  tests13 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests14
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+5e28303b6d75cb97decd455b97f91386
+  tests14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "123\t\n\
+                   \\t\n\
+                   \\t\n\
+                   \321 -4 -40"#) -}
+9fb7854555df24d171870eb96dac279a
+  tests15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "\n\
+                   \1\t\n\
+                   \3   555  -1\n\
+                   \\n\
+                   \\n\
+                   \-5"#) -}
+451aedaa35856b00209e69a2b8c939d6
+  tests16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# " -123 -456 -789 "#) -}
+17985fe9fb3ed95a38a79a558e176010
+  tests17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\t-12345\t"#) -}
+652f5437206f402325bb7b5969cd0680
+  tests18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "-1 -2 -3"#) -}
+a795b7adad14eaf106a39707c34f7839
+  tests19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "-1"#) -}
+8647d796ed6ea3494e1f34b33f3a19aa
+  tests2 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests25
+                   Homework1.Task1.tests3) -}
+dedcca3905f3ac26c939e200e8657fb4
+  tests20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# " 123 456 789 "#) -}
+5dd1f1692151409d38cf5c468cd6fe39
+  tests21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "010 020 030"#) -}
+537a68f13d870a5bc2c2d169cb6fa3ab
+  tests22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\t12345\t"#) -}
+c36200bfb465bcf8d81d85aabf8a223f
+  tests23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\t1\t"#) -}
+5d028a05fa7cd157e3f45bea4a1fcad9
+  tests24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1 "#) -}
+5f466c3a5913ff6a6e538c3537eb662d
+  tests25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# " 1"#) -}
+793a333a22f6d3ba93799805a4cad1cc
+  tests26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1 2 3"#) -}
+46f1c3114c2fe2344c4d52bfae0284e3
+  tests27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1"#) -}
+3e5a76954e62dc42abce2e5356cdc105
+  tests3 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests24
+                   Homework1.Task1.tests4) -}
+1c6ecd820e12a0321bfb89762ed62b59
+  tests4 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests23
+                   Homework1.Task1.tests5) -}
+fc7133656532e1929d8f277b08f00472
+  tests5 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests22
+                   Homework1.Task1.tests6) -}
+9d8b2a8fb0d9447ab01f088b030b8d9d
+  tests6 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests21
+                   Homework1.Task1.tests7) -}
+6e13432ddfc70f36eefc9d624a169d3e
+  tests7 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests20
+                   Homework1.Task1.tests8) -}
+0bd2719a47c1615c571f66b21b48f027
+  tests8 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests19
+                   Homework1.Task1.tests9) -}
+2623f3c2415af4208f3661bfecf58ea9
+  tests9 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Homework1.Task1.tests18
+                   Homework1.Task1.tests10) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

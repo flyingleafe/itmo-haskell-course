@@ -1,0 +1,71 @@
+
+==================== FINAL INTERFACE ====================
+2016-09-19 13:33:03.390462 UTC
+
+interface itmoh_3jdjN6JgnDTFbxnus2BZhp:Homework2.Task1 7103
+  interface hash: 8c0ec0b2b50a55f7013d8eab103f483b
+  ABI hash: af4948c6682aaf3f8c6f8110ec86cc3d
+  export-list hash: ca33b9a6c934f1f38fc71af8f121b107
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 04202c81f1977d75b6853c743de39f6b
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Homework2.Task1.safeInit
+  Homework2.Task1.safeTail
+  Homework2.Task1.strip
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Either e8724afd65fd432cfe9a54014f5f762d
+import  -/  base-4.8.2.0:Data.Functor 5c701b0af1708f0192a25dfe14ce6274
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+cfc31a3a78fe13625f7ffdd58034ce01
+  safeInit :: [a] -> Data.Either.Either GHC.Base.String [a]
+  {- Arity: 1, Strictness: <S,1*U> -}
+4aff44a05769f8ab3dc442f20f174c34
+  safeTail :: [a] -> Data.Either.Either GHC.Base.String [a]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ds :: [a] ->
+                 case ds of wild {
+                   [] -> Homework2.Task1.safeTail1 @ a
+                   : ds1 xs -> Data.Either.Right @ GHC.Base.String @ [a] xs }) -}
+f8d662e8ce1a8bd9fcaf67c68e636638
+  safeTail1 :: Data.Either.Either GHC.Base.String [a]
+  {- Strictness: m1,
+     Unfolding: (\ @ a ->
+                 Data.Either.Left
+                   @ GHC.Base.String
+                   @ [a]
+                   Homework2.Task1.safeTail2) -}
+3d9de4ce7959eab01446ea5bf41e3ac1
+  safeTail2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "List is empty, no head"#) -}
+140da9edf8510708f3def5b1afb58413
+  strip :: [a] -> Data.Either.Either GHC.Base.String [a]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ls :: [a] ->
+                 case ls of wild {
+                   []
+                   -> Data.Either.Left
+                        @ [GHC.Types.Char]
+                        @ [a]
+                        Homework2.Task1.safeTail2
+                   : ds xs -> Homework2.Task1.safeInit @ a xs }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

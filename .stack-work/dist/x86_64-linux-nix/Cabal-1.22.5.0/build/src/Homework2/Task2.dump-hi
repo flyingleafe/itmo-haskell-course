@@ -1,0 +1,323 @@
+
+==================== FINAL INTERFACE ====================
+2016-09-19 13:33:03.302859 UTC
+
+interface itmoh_3jdjN6JgnDTFbxnus2BZhp:Homework2.Task2 7103
+  interface hash: 28176ef04e23c8ba52e9b24e665e2e04
+  ABI hash: 750c22ff7539eae3e79e2423e9d92243
+  export-list hash: 7738a1f3ab286bc816252a05cd07452e
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 04202c81f1977d75b6853c743de39f6b
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Homework2.Task2.applyEquip
+  Homework2.Task2.defaultPlayer
+  Homework2.Task2.defaultPupsen
+  Homework2.Task2.defaultVupsen
+  Homework2.Task2.fightMonster
+  Homework2.Task2.fightMonster'
+  Homework2.Task2.gloriousBattle
+  Homework2.Task2.impossibru
+  Homework2.Task2.monsterAttack
+  Homework2.Task2.monsterLoot
+  Homework2.Task2.round1
+  Homework2.Task2.round2
+  Homework2.Task2.round3
+  Homework2.Task2.Equip{Homework2.Task2.Shield Homework2.Task2.Sword}
+  Homework2.Task2.Monster{Homework2.Task2.Pupsen Homework2.Task2.Vupsen Homework2.Task2.health}
+  Homework2.Task2.Player{Homework2.Task2.Player Homework2.Task2.attack Homework2.Task2.defence}
+  Homework2.Task2.Result{Homework2.Task2.Defeat Homework2.Task2.Victory}
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+ec933bfbb1468607769c31d3d3c38d75
+  $fShowResult :: GHC.Show.Show Homework2.Task2.Result
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Homework2.Task2.Result
+                  Homework2.Task2.$fShowResult_$cshowsPrec
+                  Homework2.Task2.$fShowResult_$cshow
+                  Homework2.Task2.$fShowResult_$cshowList -}
+ec933bfbb1468607769c31d3d3c38d75
+  $fShowResult1 :: Homework2.Task2.Result -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Homework2.Task2.Result eta :: GHC.Base.String ->
+                 case ds of wild {
+                   Homework2.Task2.Victory
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr
+                           @ GHC.Types.Char
+                           @ b
+                           c
+                           n
+                           Homework2.Task2.$fShowResult3)
+                        eta
+                   Homework2.Task2.Defeat
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr
+                           @ GHC.Types.Char
+                           @ b
+                           c
+                           n
+                           Homework2.Task2.$fShowResult2)
+                        eta }) -}
+060346a6f0b0d3a5622a8501c1cf0c68
+  $fShowResult2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Defeat"#) -}
+7ef44f7a87943aee4a71c4e505d51909
+  $fShowResult3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Victory"#) -}
+ec933bfbb1468607769c31d3d3c38d75
+  $fShowResult_$cshow :: Homework2.Task2.Result -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Homework2.Task2.Result ->
+                 case x of wild {
+                   Homework2.Task2.Victory -> Homework2.Task2.$fShowResult3
+                   Homework2.Task2.Defeat -> Homework2.Task2.$fShowResult2 }) -}
+ec933bfbb1468607769c31d3d3c38d75
+  $fShowResult_$cshowList ::
+    [Homework2.Task2.Result] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Homework2.Task2.Result
+                   Homework2.Task2.$fShowResult1) -}
+ec933bfbb1468607769c31d3d3c38d75
+  $fShowResult_$cshowsPrec ::
+    GHC.Types.Int -> Homework2.Task2.Result -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ ds :: GHC.Types.Int
+                   ds1 :: Homework2.Task2.Result
+                   eta :: GHC.Base.String ->
+                 case ds1 of wild {
+                   Homework2.Task2.Victory
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr
+                           @ GHC.Types.Char
+                           @ b
+                           c
+                           n
+                           Homework2.Task2.$fShowResult3)
+                        eta
+                   Homework2.Task2.Defeat
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr
+                           @ GHC.Types.Char
+                           @ b
+                           c
+                           n
+                           Homework2.Task2.$fShowResult2)
+                        eta }) -}
+ddda6eb9f57c17c176a9463287b92478
+  $wfightMonster' ::
+    GHC.Types.Bool
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> Homework2.Task2.Monster
+    -> GHC.Base.Maybe Homework2.Task2.Player
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,1*U><L,U(U)><L,U><L,U>,
+     Inline: [0] -}
+024ce20c0982b2a146bbf94cc6c39c24
+  data Equip = Shield | Sword
+    Promotable
+43627b0a82ee35daa3c0197422a811be
+  data Monster
+    = Vupsen {health :: GHC.Types.Int}
+    | Pupsen {health :: GHC.Types.Int}
+fc1d01fcf3b64a03aeb41b6e7fab5b9f
+  data Player
+    = Player {attack :: GHC.Types.Int, defence :: GHC.Types.Int}
+ec933bfbb1468607769c31d3d3c38d75
+  data Result = Victory | Defeat
+    Promotable
+f6c37e075d3732b9930c72aabf64a164
+  applyEquip ::
+    Homework2.Task2.Equip
+    -> Homework2.Task2.Player -> Homework2.Task2.Player
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U(U(U),U(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Homework2.Task2.Equip w1 :: Homework2.Task2.Player ->
+                 case w1 of ww { Homework2.Task2.Player ww1 ww2 ->
+                 case w of wild {
+                   Homework2.Task2.Shield
+                   -> Homework2.Task2.Player
+                        ww1
+                        (case ww2 of wild1 { GHC.Types.I# x ->
+                         GHC.Types.I# (GHC.Prim.+# x 5) })
+                   Homework2.Task2.Sword
+                   -> Homework2.Task2.Player
+                        (case ww1 of wild1 { GHC.Types.I# x ->
+                         GHC.Types.I# (GHC.Prim.+# x 3) })
+                        ww2 } }) -}
+f2e0d8455ab7fc67aa43889d3e034856
+  attack :: Homework2.Task2.Player -> GHC.Types.Int
+  RecSel Homework2.Task2.Player
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Homework2.Task2.Player ->
+                 case ds of wild { Homework2.Task2.Player ds1 ds2 -> ds1 }) -}
+5fd4932dee97aaba26868be59bdd050e
+  defaultPlayer :: Homework2.Task2.Player
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Homework2.Task2.Player
+                   Homework2.Task2.defaultPlayer2
+                   Homework2.Task2.defaultPlayer1) -}
+daabee7e5f7c937eab9e4185a2b519e4
+  defaultPlayer1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5) -}
+37942177d5a4ad34fb477b7f82e48ba7
+  defaultPlayer2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3) -}
+dc35cf4e1cc0a82c68ed18c02f30bc29
+  defaultPupsen :: Homework2.Task2.Monster
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Homework2.Task2.Pupsen
+                   Homework2.Task2.defaultPupsen1) -}
+f17de70f179c5ac51735e0d5819a5435
+  defaultPupsen1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 6) -}
+6f7922bb3b5473b79efb56c18a2dbfb3
+  defaultVupsen :: Homework2.Task2.Monster
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Homework2.Task2.Vupsen
+                   Homework2.Task2.defaultVupsen1) -}
+528eda86e1b01a7c4751319755f6ffe7
+  defaultVupsen1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4) -}
+1225f172de436538b832b1fb33b831ab
+  defence :: Homework2.Task2.Player -> GHC.Types.Int
+  RecSel Homework2.Task2.Player
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Homework2.Task2.Player ->
+                 case ds of wild { Homework2.Task2.Player ds1 ds2 -> ds2 }) -}
+dc669fc3e79081efb7138039f46fb863
+  fightMonster ::
+    Homework2.Task2.Player
+    -> Homework2.Task2.Monster -> GHC.Base.Maybe Homework2.Task2.Player
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ w :: Homework2.Task2.Player
+                   w1 :: Homework2.Task2.Monster ->
+                 case w of ww { Homework2.Task2.Player ww1 ww2 ->
+                 case ww2 of ww3 { GHC.Types.I# ww4 ->
+                 Homework2.Task2.$wfightMonster' GHC.Types.True ww1 ww4 w1 } }) -}
+900dcad99a4623c123675191da4edaa8
+  fightMonster' ::
+    GHC.Types.Bool
+    -> Homework2.Task2.Player
+    -> Homework2.Task2.Monster
+    -> GHC.Base.Maybe Homework2.Task2.Player
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U><S(LS),1*U(U(U),U(U))><L,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Bool
+                   w1 :: Homework2.Task2.Player
+                   w2 :: Homework2.Task2.Monster ->
+                 case w1 of ww { Homework2.Task2.Player ww1 ww2 ->
+                 case ww2 of ww3 { GHC.Types.I# ww4 ->
+                 Homework2.Task2.$wfightMonster' w ww1 ww4 w2 } }) -}
+f483c73b46734565211d0cf2d1d615ca
+  gloriousBattle ::
+    Homework2.Task2.Player
+    -> [Homework2.Task2.Monster] -> Homework2.Task2.Result
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U(U),U(U))><S,1*U>,
+     Unfolding: (\ pl :: Homework2.Task2.Player
+                   enemies :: [Homework2.Task2.Monster] ->
+                 case Homework2.Task2.gloriousBattle_go1 enemies pl of wild {
+                   GHC.Base.Nothing -> Homework2.Task2.Defeat
+                   GHC.Base.Just ds -> Homework2.Task2.Victory }) -}
+af2f8f456be05fbfc3b1162ef620a46d
+  gloriousBattle_go1 ::
+    [Homework2.Task2.Monster]
+    -> Homework2.Task2.Player -> GHC.Base.Maybe Homework2.Task2.Player
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(U(U),U(U))> -}
+f2cba4f14139b8a7697e1d586ca4d2c6
+  health :: Homework2.Task2.Monster -> GHC.Types.Int
+  RecSel Homework2.Task2.Monster
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Homework2.Task2.Monster ->
+                 case ds of wild {
+                   Homework2.Task2.Vupsen ds1 -> ds1
+                   Homework2.Task2.Pupsen ds1 -> ds1 }) -}
+7afc72d2d60be49a6840baa64dcd2457
+  impossibru :: [Homework2.Task2.Monster]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Homework2.Task2.Monster
+                   Homework2.Task2.defaultVupsen
+                   (GHC.Types.[] @ Homework2.Task2.Monster)) -}
+ec6d362782e6f4f5ce80ab7cb3f521a5
+  monsterAttack :: Homework2.Task2.Monster -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Homework2.Task2.Monster ->
+                 case ds of wild {
+                   Homework2.Task2.Vupsen ds1 -> Homework2.Task2.defaultPlayer1
+                   Homework2.Task2.Pupsen ds1 -> Homework2.Task2.monsterAttack1 }) -}
+7e00ea373ab432110ebdd549cff89da4
+  monsterAttack1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2) -}
+106da82d74fc53c781c4228dd3a2674e
+  monsterLoot :: Homework2.Task2.Monster -> Homework2.Task2.Equip
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Homework2.Task2.Monster ->
+                 case ds of wild {
+                   Homework2.Task2.Vupsen ds1 -> Homework2.Task2.Sword
+                   Homework2.Task2.Pupsen ds1 -> Homework2.Task2.Shield }) -}
+e1f8a36aca3713d80303451f3c3d6ed7
+  round1 :: [Homework2.Task2.Monster]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Homework2.Task2.Monster
+                   Homework2.Task2.defaultPupsen
+                   (GHC.Types.[] @ Homework2.Task2.Monster)) -}
+637cf5f3ebb9e1ddbaf269ef34a72053
+  round2 :: [Homework2.Task2.Monster]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Homework2.Task2.Monster
+                   Homework2.Task2.defaultPupsen
+                   Homework2.Task2.round1) -}
+78da6e84da92e4765a280331aa2ec133
+  round3 :: [Homework2.Task2.Monster]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Homework2.Task2.Monster
+                   Homework2.Task2.defaultPupsen
+                   Homework2.Task2.impossibru) -}
+instance GHC.Show.Show [Homework2.Task2.Result]
+  = Homework2.Task2.$fShowResult
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

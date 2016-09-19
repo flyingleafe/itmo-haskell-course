@@ -1,0 +1,117 @@
+
+==================== FINAL INTERFACE ====================
+2016-09-19 13:33:03.550456 UTC
+
+interface itmoh_3jdjN6JgnDTFbxnus2BZhp:Homework1.Task3 7103
+  interface hash: 7c8ae7581ed5b7ba9176354d24b7d494
+  ABI hash: 537708e745b6e94adfa8beeabb378dfb
+  export-list hash: e7e475502df73f91369078d83e023b50
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 723fa1c691d6d361cdaf4155d473e600
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Homework1.Task3.mergeSort
+  Homework1.Task3.randomIntList
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0* deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59
+                      ghc-prim-0.4.0.0 integer-gmp-1.0.0.0
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL*
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Functor 5c701b0af1708f0192a25dfe14ce6274
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL:System.Random 103ad55b56caf6eb812c579b8e1813b0
+4d723bafde67e14252a6cfa0d22ddfb0
+  mergeSort :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+032882391cecb806a81e7b6e63cd6f9b
+  randomIntList ::
+    GHC.Types.Int
+    -> GHC.Types.Int -> GHC.Types.Int -> GHC.Types.IO [GHC.Types.Int]
+  {- Arity: 4, Strictness: <L,1*U(U)><L,1*U(U)><L,1*U(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Homework1.Task3.randomIntList1
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <[GHC.Types.Int]>_R)) -}
+b0a4d03c327f6b5d201a95f5b6c07c52
+  randomIntList1 ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Int] #)
+  {- Arity: 4, Strictness: <L,1*U(U)><L,1*U(U)><L,1*U(U)><L,U>,
+     Unfolding: (\ n :: GHC.Types.Int
+                   from :: GHC.Types.Int
+                   to :: GHC.Types.Int
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Random.theStdGen
+                        `cast`
+                      (GHC.IORef.NTCo:IORef[0] <System.Random.StdGen>_N) of wild { GHC.STRef.STRef r# ->
+                 case GHC.Prim.atomicModifyMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ System.Random.StdGen
+                        @ (System.Random.StdGen, System.Random.StdGen)
+                        @ System.Random.StdGen
+                        r#
+                        System.Random.newStdGen2
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of b1 { System.Random.StdGen ipv2 ipv3 ->
+                 (# ipv,
+                    case n of wild1 { GHC.Types.I# y ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.<# 0 y) of wild2 {
+                      GHC.Types.False -> GHC.Types.[] @ GHC.Types.Int
+                      GHC.Types.True
+                      -> let {
+                           rand :: System.Random.StdGen
+                                   -> (GHC.Types.Int, System.Random.StdGen)
+                           = System.Random.$w$crandomR20
+                               @ System.Random.StdGen
+                               System.Random.$fRandomGenStdGen
+                               from
+                               to
+                         } in
+                         letrec {
+                           $wgo :: System.Random.StdGen -> GHC.Prim.Int# -> [GHC.Types.Int]
+                             {- Arity: 2, Strictness: <L,U><S,1*U>, Inline: [0] -}
+                           = \ w :: System.Random.StdGen ww :: GHC.Prim.Int# ->
+                             case rand w of wild3 { (,) x g' ->
+                             case x of x1 { GHC.Types.I# ipv4 ->
+                             case ww of ds2 {
+                               DEFAULT
+                               -> GHC.Types.: @ GHC.Types.Int x1 ($wgo g' (GHC.Prim.-# ds2 1))
+                               1
+                               -> GHC.Types.:
+                                    @ GHC.Types.Int
+                                    x1
+                                    (GHC.Types.[] @ GHC.Types.Int) } } }
+                         } in
+                         $wgo b1 y } } #) } } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
