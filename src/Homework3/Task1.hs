@@ -1,8 +1,7 @@
 {-# LANGUAGE FlexibleInstances #-}
 module Homework3.Task1 where
 
-import           Data.Function (on)
-import           Data.Monoid   ((<>))
+import           Data.Monoid ((<>))
 
 data Coin color = Coin { getCoin :: Int }
 
@@ -22,7 +21,7 @@ addCoins :: Coin color -> Coin color -> Coin color
 addCoins (Coin a) (Coin b) = Coin (a + b)
 
 class Color a where
-  importance :: Coin a -> Int
+  importance :: Coin a -> Double     -- Double is chosen to be able to easily add new colors between existing
 
 instance Color Blue where
   importance = const 0
@@ -34,11 +33,6 @@ instance Monoid (Coin color) where
   mempty = Coin 0
   mappend = addCoins
 
-instance Color color => Eq (Coin color) where
-  a == b = importance a == importance b && getCoin a == getCoin b
-
-instance Color color => Ord (Coin color) where
-  compare = (compare `on` importance) <> (compare `on` getCoin)
-
-expr :: Bool
-expr = createCoins blue 10 < createCoins red 5
+compareCoins :: (Color a, Color b) => Coin a -> Coin b -> Ordering
+compareCoins a b = importance a `compare` importance b <>
+                   getCoin a `compare` getCoin b
