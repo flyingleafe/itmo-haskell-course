@@ -32,7 +32,7 @@ keyUnit k = M.fromPair (k, ())
 
 instance Ord k => Set T.Tree k where
   emptySet = M.key' <$> M.emptyMap
-  toList = map fst . M.toList . fmap keyUnit
+  toList = fmap fst . M.toList . fmap keyUnit
   find k = fmap (const k) . M.find k . fmap keyUnit
   insert k = fmap M.key' . M.insert k () . fmap keyUnit
   delete k = fmap M.key' . M.delete k . fmap keyUnit

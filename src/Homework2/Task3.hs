@@ -19,9 +19,8 @@ data Tree k = Tree { key    :: k
 
 makeTree :: k -> Tree k -> Tree k -> Tree k
 makeTree x l r = Tree x h l r
-  where h = max (height l) (height r) + 1
+  where h = max (height' l) (height' r) + 1
 
-{--
 rotateLeft, rotateRight, bigRotateLeft, bigRotateRight :: Tree k -> Tree k
 rotateLeft Nil = error "Invalid left rotation"
 rotateLeft Tree { rtree = Nil } = error "Invalid left rotation"
@@ -41,9 +40,18 @@ height' :: Tree k -> Int
 height' Nil = 0
 height' t   = height t
 
+balanceFactor :: Tree k -> Int
+balanceFactor Nil                   = 0
+balanceFactor Tree { ltree, rtree } = height' ltree - height' rtree
+
 rebalance :: Tree k -> Tree k
 rebalance Nil = Nil
---}
+rebalance t
+  | balanceFactor t == -2 && balanceFactor (rtree t) `elem` [-1, 0] = rotateLeft t
+  | balanceFactor t == -2 && balanceFactor (rtree t) == 1 && balanceFactor (ltree $ rtree t) `elem` [-1..1] = bigRotateLeft t
+  | balanceFactor t == 2 && balanceFactor (ltree t) `elem` [0, 1] = rotateRight t
+  | balanceFactor t == 2 && balanceFactor (ltree t) == -1 && balanceFactor (rtree $ ltree t) `elem` [-1..1] = bigRotateRight t
+  | otherwise = t
 
 find :: Ord k => k -> Tree k -> Maybe k
 find _ Nil = Nothing
@@ -56,15 +64,15 @@ insert :: Ord k => k -> Tree k -> Tree k
 insert x Nil = Tree x 1 Nil Nil
 insert x t@Tree{..}
   | x == key = t { key = x }  -- in case of exotic Eq instance
-  | x < key = t { ltree = insert x ltree }
-  | otherwise = t { rtree = insert x rtree }
+  | x < key = rebalance $ t { ltree = insert x ltree }
+  | otherwise = rebalance $ t { rtree = insert x rtree }
 
 delete :: Ord k => k -> Tree k -> Tree k
 delete _ Nil = Nil
 delete x t@Tree{..}
   | x == key = deleteRoot t
-  | x < key = t { ltree = delete x ltree }
-  | otherwise = t { rtree = delete x rtree }
+  | x < key = rebalance $ t { ltree = delete x ltree }
+  | otherwise = rebalance $ t { rtree = delete x rtree }
 
 deleteRoot :: Tree k -> Tree k
 deleteRoot Nil = Nil
