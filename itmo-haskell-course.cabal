@@ -28,6 +28,7 @@ library
                      , Homework3.Task3
                      , Homework3.Task4
                      , Homework3.Task4v1
+                     , Homework3.Task4v2
   build-depends:       base >= 4.7 && < 5
                      , random
   default-language:    Haskell2010
@@ -38,6 +39,8 @@ test-suite itmo-haskell-course-test
    main-is:             Test.hs
    other-modules:       Spec
                       , Test.Homework3.Task2Spec
+                      , Test.Homework3.Task3Spec
+                      , Test.Homework3.Task4Spec
    build-depends:       base
                       , itmo-haskell-course
                       , QuickCheck >= 2.8.1
