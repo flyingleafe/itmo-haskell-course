@@ -1,18 +1,8 @@
 import qualified Bench.Homework3.Task3Bench as Task3Bench
 
-import           System.IO                  (Handle, hGetEncoding, hSetEncoding,
-                                             mkTextEncoding, stderr, stdin,
-                                             stdout)
-
-makeSafe :: Handle -> IO ()
-makeSafe h = do
-  ce' <- hGetEncoding h
-  case ce' of
-    Nothing -> return ()
-    Just ce -> mkTextEncoding (takeWhile (/= '/') $ show ce ++ "//TRANSLIT") >>=
-      hSetEncoding h
+import           System.IO
 
 main :: IO ()
 main = do
-  mapM_ makeSafe [stdout, stdin, stderr]
+  hSetEncoding stdout utf8
   Task3Bench.main

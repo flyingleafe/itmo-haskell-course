@@ -17,6 +17,14 @@ fromListBench :: Int -> Benchmark
 fromListBench n = env (arbitraryIntVectorOf n) $
                   \ls -> bench ("fromList: n = " ++ show n) $ whnf (S.fromList :: [Int] -> T.Tree Int) ls
 
+fromBambooListBench :: Int -> Benchmark
+fromBambooListBench n = env (return [1..n]) $
+                        \ls -> bench ("fromBambooList: n = " ++ show n) $ whnf (S.fromList :: [Int] -> T.Tree Int) ls
+
 main :: IO ()
 main = defaultMainWith (defaultConfig { reportFile = Just "avl-tree.html" })
-       [fromListBench 1000]
+       [ fromListBench 1000
+       , fromListBench 100000
+       , fromBambooListBench 1000
+       , fromBambooListBench 100000
+       ]

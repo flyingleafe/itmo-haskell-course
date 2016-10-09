@@ -45,6 +45,7 @@ balanceFactor Nil                   = 0
 balanceFactor Tree { ltree, rtree } = height' ltree - height' rtree
 
 rebalance :: Tree k -> Tree k
+-- rebalance = id
 rebalance Nil = Nil
 rebalance t
   | balanceFactor t == -2 && balanceFactor (rtree t) `elem` [-1, 0] = rotateLeft t
