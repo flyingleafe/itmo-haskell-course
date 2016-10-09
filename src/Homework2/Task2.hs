@@ -1,6 +1,6 @@
 module Homework2.Task2 where
 
-import Control.Monad
+import           Control.Monad
 
 data Player = Player { attack :: Int, defence :: Int }
 data Monster = Vupsen { health :: Int } | Pupsen { health :: Int }
@@ -17,7 +17,7 @@ monsterLoot (Pupsen _) = Shield
 
 applyEquip :: Equip -> Player -> Player
 applyEquip Shield pl = pl { defence = defence pl + 5 }
-applyEquip Sword pl = pl { attack = attack pl + 3 }
+applyEquip Sword pl  = pl { attack = attack pl + 3 }
 
 fightMonster' :: Bool -> Player -> Monster -> Maybe Player
 fightMonster' playerFirst player monster
@@ -31,13 +31,17 @@ fightMonster = fightMonster' True
 
 gloriousBattle :: Player -> [Monster] -> Result
 gloriousBattle pl enemies = case foldM fightMonster pl enemies of
-                              Just _ -> Victory
+                              Just _  -> Victory
                               Nothing -> Defeat
 
+defaultPlayer :: Player
 defaultPlayer = Player 3 5
+
+defaultPupsen, defaultVupsen :: Monster
 defaultVupsen = Vupsen 4
 defaultPupsen = Pupsen 6
 
+round1, round2, round3, impossibru :: [Monster]
 round1 = [defaultPupsen]
 round2 = [defaultPupsen, defaultPupsen]
 round3 = [defaultPupsen, defaultVupsen]
