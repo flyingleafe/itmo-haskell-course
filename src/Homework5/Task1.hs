@@ -2,7 +2,7 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 module Homework5.Task1 where
 
-import           Prelude (($))
+import           Prelude (undefined, ($))
 
 class Functor f where
   fmap :: (a -> b) -> f a -> f b
@@ -80,7 +80,9 @@ instance Traversable Tree where
 instance Functor (Const a) where
   fmap _ (Const a) = Const a
 
--- Applicative instance is impossible!
+instance Applicative (Const a) where
+  pure _ = Const undefined
+  _ <*> Const b = Const b
 
 instance Foldable (Const a) where
   foldr _ b (Const _) = b
@@ -92,7 +94,9 @@ instance Traversable (Const a) where
 instance Functor ((,) a) where
   fmap f (a, b) = (a, f b)
 
--- Applicative instance is impossible again!
+instance Applicative ((,) a) where
+  pure x = (undefined, x)
+  (_, f) <*> (b, c) = (b, f c)
 
 instance Foldable ((,) a) where
   foldr f b (_, a) = f a b
