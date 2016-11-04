@@ -2,7 +2,7 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 module Homework5.Task1 where
 
-import           Prelude (undefined, ($))
+import           Prelude (Int, undefined, ($), (.))
 
 class Functor f where
   fmap :: (a -> b) -> f a -> f b
@@ -103,3 +103,13 @@ instance Foldable ((,) a) where
 
 instance Traversable ((,) a) where
   traverse f (a, b) = (,) a <$> f b
+
+data Fun3 a = Fun3 ((a -> Int) -> a)
+
+instance Functor Fun3 where
+  -- fmap :: (a -> b) -> ((a -> Int) -> a) -> (b -> Int) -> b
+  fmap f (Fun3 g) = Fun3 $ \h -> f (g (h . f))
+
+
+-- x :: Maybe Int
+-- traverse show x :: [Maybe Char]

@@ -3,7 +3,10 @@ module Homework4.Task1 where
 import           Control.Applicative ((<|>))
 import           Data.Maybe          (maybeToList)
 
-data InNode a = Node { label :: a, parent :: Maybe (InNode a) }
+data InNode a = Node
+  { label  :: a
+  , parent :: Maybe (InNode a)
+  }
 
 split :: [a] -> Maybe (a, [a])
 split []     = Nothing

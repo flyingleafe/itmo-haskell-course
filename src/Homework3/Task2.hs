@@ -1,8 +1,8 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-module Homework3.Task2 ( module Exports ) where
+module Homework3.Task2 () where
 
 import           Data.Foldable   (toList)
-import           Homework2.Task3 as Exports
+import           Homework2.Task3
 
 instance Foldable Tree where
   foldr _ x Nil              = x

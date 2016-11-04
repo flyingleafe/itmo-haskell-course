@@ -5,7 +5,7 @@ module Test.Homework3.Task2Spec ( spec ) where
 import           Homework3.Task2
 import           Homework3.Task3       (fromList)
 import           Homework3.Task4v1     ()
-import           Test.Hspec            (Spec, describe)
+import           Test.Hspec
 import           Test.Hspec.QuickCheck (prop)
 import           Test.QuickCheck       (Arbitrary (arbitrary), (===))
 

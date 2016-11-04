@@ -17,7 +17,12 @@ library
   hs-source-dirs:      src
   exposed-modules:     Homework1
                      , Homework2
-                     , Homework1.Task1
+                     , Homework3
+                     , Homework4
+                     , Homework5
+                     , Homework6     
+                     , ControlWork1
+  other-modules:       Homework1.Task1
                      , Homework1.Task2
                      , Homework1.Task3
                      , Homework2.Task1
@@ -34,9 +39,19 @@ library
                      , Homework4.Task4
                      , Homework5.Task1
                      , Homework5.Task2
-                     , ControlWork1
+                     , Homework6.Task1
+                     , Homework6.Task2
+                     , Homework6.Task3
+                     , Homework6.Task4
   build-depends:       base >= 4.7 && < 5
                      , random
+                     , lens
+                     , mtl
+                     , text
+                     , transformers
+                     , semigroups
+                     , optparse-applicative
+                     , megaparsec
   default-language:    Haskell2010
   ghc-options:         -Wall -fno-warn-orphans
   default-extensions:  OverloadedStrings

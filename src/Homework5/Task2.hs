@@ -4,7 +4,9 @@ import           Control.Applicative (Alternative (..))
 import           Data.Bifunctor      (first)
 import           Data.Char           (isAlpha, isAlphaNum, isDigit, isSpace, isUpper)
 
-newtype Parser a = Parser { runParser :: String -> Maybe (a, String) }
+newtype Parser a = Parser
+  { runParser :: String -> Maybe (a, String)
+  }
 
 -- Exercise 1. Functor instance
 instance Functor Parser where
