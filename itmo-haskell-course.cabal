@@ -83,6 +83,7 @@ executable expr-parsing
                       , itmo-haskell-course
                       , text
                       , optparse-applicative
+                      , megaparsec
    ghc-options:         -Wall -fno-warn-orphans
    default-extensions:  OverloadedStrings
                       , RecordWildCards

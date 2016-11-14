@@ -5,6 +5,8 @@ module Homework7.Task2
        , parseArith
        , makeMapping
        , emptyMap
+       , fromParsec
+       , varPair
        ) where
 
 import           Control.Applicative   ((<|>))
@@ -14,8 +16,10 @@ import           Data.Monoid           ((<>))
 import           Data.Scientific       (toRealFloat)
 import           Data.Text             (Text)
 import qualified Data.Text             as T
+import           Options.Applicative   (ReadM, eitherReader)
 import           Text.Megaparsec       (Dec, ParseError (..), alphaNumChar, char,
                                         letterChar, many, parse, space)
+import           Text.Megaparsec.Error (parseErrorPretty)
 import           Text.Megaparsec.Expr  (Operator (..), makeExprParser)
 import qualified Text.Megaparsec.Lexer as L
 import           Text.Megaparsec.Text  (Parser)
@@ -66,14 +70,20 @@ runEval mapping expr = runReader (eval expr) mapping
 symbol :: Text -> Parser Text
 symbol = fmap T.pack . L.symbol space . T.unpack
 
+lexeme :: Parser a -> Parser a
+lexeme = L.lexeme space
+
 number :: Parser ArithVal
-number = toRealFloat <$> L.lexeme space L.number
+number = toRealFloat <$> lexeme L.number
+
+signed :: Parser ArithVal
+signed = toRealFloat <$> L.signed space L.number
 
 identifier :: Parser VarName
-identifier = T.pack <$> ((:) <$> letterChar <*> many alphaNumChar)
+identifier = lexeme $ T.pack <$> ((:) <$> letterChar <*> many alphaNumChar)
 
 parens :: Parser a -> Parser a
-parens p = L.lexeme space (char '(') *> p <* L.lexeme space (char ')')
+parens p = lexeme (char '(') *> p <* lexeme (char ')')
 
 arithTerm :: Parser Arith
 arithTerm = (Lit <$> number)
@@ -96,3 +106,10 @@ arith = makeExprParser arithTerm arithTable
 
 parseArith :: Text -> Either (ParseError Char Dec) Arith
 parseArith expr = parse arith "" expr
+
+-- | Options helper
+varPair :: Parser (VarName, ArithVal)
+varPair = parens $ (,) <$> (identifier <* lexeme (char ',')) <*> signed
+
+fromParsec :: Parser a -> ReadM a
+fromParsec parser = eitherReader $ either (Left . parseErrorPretty) Right . parse parser "<CLI options>" . T.pack

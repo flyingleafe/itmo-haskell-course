@@ -1,8 +1,11 @@
 module Main where
 
-import           Data.Text           (Text, pack)
-import           Homework7           (ArithVal, VarName, makeMapping, parseArith, runEval)
-import           Options.Applicative
+import           Data.String           (IsString (..))
+import           Data.Text             (Text)
+import           Homework7             (ArithVal, VarName, fromParsec, makeMapping,
+                                        parseArith, runEval, varPair)
+import           Options.Applicative   hiding (strOption)
+import           Text.Megaparsec.Error (parseErrorPretty)
 
 data Action = Print
             | Eval
@@ -13,18 +16,22 @@ data ExprOptions = EO
   , expr       :: !Text
   , vars       :: ![(VarName, ArithVal)]}
 
-textOption :: Mod OptionFields String -> Parser Text
-textOption = fmap pack . strOption
+-- | Honestly stolen from serokell-util
+fromStr :: IsString s => ReadM s
+fromStr = fromString <$> str
+
+strOption :: IsString s => Mod OptionFields s -> Parser s
+strOption = option fromStr
 
 argsParser :: Parser ExprOptions
 argsParser = EO
   <$> option auto (long "exprAction"
                 <> short 'a'
                 <> help "Action to perform: print AST or evaluate")
-  <*> textOption (long "expr"
-                <> short 'e'
-                <> help "Expression to parse")
-  <*> many (option auto $
+  <*> strOption (long "expr"
+              <> short 'e'
+              <> help "Expression to parse")
+  <*> many (option (fromParsec varPair) $
             long "var"
          <> short 'v'
          <> help "Free variables values")
@@ -38,7 +45,7 @@ main = do
   EO {..} <- execParser argsInfo
   let east = parseArith expr
   case east of
-    Left err -> putStrLn $ "Parse error: " ++ show err
+    Left err -> putStrLn $ "Error while parsing expression: " ++ parseErrorPretty err
     Right ast -> case exprAction of
       Print -> print ast
       Eval  -> print $ runEval (makeMapping vars) ast
