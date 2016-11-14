@@ -21,6 +21,7 @@ library
                      , Homework4
                      , Homework5
                      , Homework6     
+                     , Homework7
                      , ControlWork1
   other-modules:       Homework1.Task1
                      , Homework1.Task2
@@ -43,6 +44,8 @@ library
                      , Homework6.Task2
                      , Homework6.Task3
                      , Homework6.Task4
+                     , Homework7.Task1
+                     , Homework7.Task2
   build-depends:       base >= 4.7 && < 5
                      , random
                      , lens
@@ -51,6 +54,7 @@ library
                      , transformers
                      , semigroups
                      , optparse-applicative
+                     , containers
                      , megaparsec
   default-language:    Haskell2010
   ghc-options:         -Wall -fno-warn-orphans
@@ -58,6 +62,17 @@ library
                      , RecordWildCards
                      , DeriveDataTypeable
                      , GeneralizedNewtypeDeriving
+
+executable cfg-creator
+   hs-source-dirs:      app
+   main-is:             CfgCreator.hs
+   build-depends:       base
+                      , itmo-haskell-course
+   ghc-options:         -Wall -fno-warn-orphans
+   default-extensions:  OverloadedStrings
+                      , RecordWildCards
+                      , DeriveDataTypeable
+                      , GeneralizedNewtypeDeriving
 
 test-suite itmo-haskell-course-test
    type:                exitcode-stdio-1.0
