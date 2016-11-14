@@ -47,6 +47,7 @@ library
                      , Homework7.Task1
                      , Homework7.Task2
   build-depends:       base >= 4.7 && < 5
+                     , scientific
                      , random
                      , lens
                      , mtl
@@ -73,6 +74,22 @@ executable cfg-creator
                       , RecordWildCards
                       , DeriveDataTypeable
                       , GeneralizedNewtypeDeriving
+   default-language:    Haskell2010
+
+executable expr-parsing
+   hs-source-dirs:      app
+   main-is:             ExprParsing.hs
+   build-depends:       base
+                      , itmo-haskell-course
+                      , text
+                      , optparse-applicative
+   ghc-options:         -Wall -fno-warn-orphans
+   default-extensions:  OverloadedStrings
+                      , RecordWildCards
+                      , DeriveDataTypeable
+                      , GeneralizedNewtypeDeriving
+   default-language:    Haskell2010
+
 
 test-suite itmo-haskell-course-test
    type:                exitcode-stdio-1.0
