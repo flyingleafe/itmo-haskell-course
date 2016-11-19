@@ -1,6 +1,6 @@
 module Main where
 
-import           Homework7          (runConfigurator)
+import           Homework8          (runConfigurator)
 import           System.Environment (getArgs)
 
 main :: IO ()

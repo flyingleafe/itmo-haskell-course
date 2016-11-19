@@ -22,6 +22,7 @@ library
                      , Homework5
                      , Homework6     
                      , Homework7
+                     , Homework8
                      , ControlWork1
   other-modules:       Homework1.Task1
                      , Homework1.Task2
@@ -46,6 +47,9 @@ library
                      , Homework6.Task4
                      , Homework7.Task1
                      , Homework7.Task2
+                     , Homework8.Task1
+                     , Homework8.Task2
+                     , Homework8.Task3
   build-depends:       base >= 4.7 && < 5
                      , scientific
                      , random
