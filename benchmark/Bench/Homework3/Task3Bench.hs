@@ -23,8 +23,8 @@ fromBambooListBench n = env (return [1..n]) $
 
 main :: IO ()
 main = defaultMainWith (defaultConfig { reportFile = Just "avl-tree.html" })
-       [ fromListBench 1000
-       , fromListBench 100000
-       , fromBambooListBench 1000
-       , fromBambooListBench 100000
+       [ fromlistbench 1000
+       , fromlistbench 100000
+       , frombamboolistbench 1000
+       , frombamboolistbench 100000
        ]

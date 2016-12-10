@@ -50,7 +50,7 @@ extra-package-dbs: []
 
 nix:
   enable: true
-  packages: [git, ncurses]
+  packages: [git, ncurses, binutils]
 
 # Control whether we use the GHC we find on the path
 # system-ghc: true

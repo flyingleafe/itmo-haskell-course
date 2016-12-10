@@ -23,6 +23,8 @@ library
                      , Homework6     
                      , Homework7
                      , Homework8
+                     , Homework9
+                     , Homework10
                      , ControlWork1
   other-modules:       Homework1.Task1
                      , Homework1.Task2
@@ -50,7 +52,20 @@ library
                      , Homework8.Task1
                      , Homework8.Task2
                      , Homework8.Task3
+                     , Homework9.Task1
+                     , Homework10.Task1
+                     , Homework10.Task2
+                     , Homework10.Task3
+                     , Homework10.Task4
+                     , Homework10.Task5
+                     , Homework10.Task6
+                     , Homework10.Task7
+                     , Homework10.Task8
+                     , Homework10.Task9
+                     , Homework10.Task10
   build-depends:       base >= 4.7 && < 5
+                     , array
+                     , deepseq
                      , scientific
                      , random
                      , lens
@@ -116,8 +131,12 @@ benchmark itmo-haskell-course-bench
    hs-source-dirs:      benchmark
    main-is:             Benchmark.hs
    other-modules:       Bench.Homework3.Task3Bench
+                        Bench.Homework9.Task1Bench
    build-depends:       base
+                      , array
+                      , dlist
                       , itmo-haskell-course >= 0.1
+                      , containers
                       , criterion
                       , QuickCheck >= 2.8.1
    ghc-options:         -O2 -threaded -rtsopts -with-rtsopts=-N
