@@ -71,11 +71,15 @@ library
                      , lens
                      , mtl
                      , text
+                     , tagged
                      , transformers
+                     , template-haskell
+                     , filesystem-trees
                      , semigroups
                      , optparse-applicative
                      , containers
                      , megaparsec
+                     , MissingH
   default-language:    Haskell2010
   ghc-options:         -Wall -fno-warn-orphans
   default-extensions:  OverloadedStrings
@@ -110,6 +114,29 @@ executable expr-parsing
                       , GeneralizedNewtypeDeriving
    default-language:    Haskell2010
 
+executable hw10-task2
+   hs-source-dirs:      app
+   main-is:             ThEnv.hs
+   build-depends:       base
+                      , itmo-haskell-course
+   ghc-options:         -Wall -fno-warn-orphans
+   default-extensions:  OverloadedStrings
+                      , RecordWildCards
+                      , DeriveDataTypeable
+                      , GeneralizedNewtypeDeriving
+   default-language:    Haskell2010
+
+executable walker
+   hs-source-dirs:      app
+   main-is:             Walker.hs
+   build-depends:       base
+                      , itmo-haskell-course
+   ghc-options:         -Wall -fno-warn-orphans
+   default-extensions:  OverloadedStrings
+                      , RecordWildCards
+                      , DeriveDataTypeable
+                      , GeneralizedNewtypeDeriving
+   default-language:    Haskell2010
 
 test-suite itmo-haskell-course-test
    type:                exitcode-stdio-1.0
